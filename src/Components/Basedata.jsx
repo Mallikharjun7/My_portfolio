@@ -1,45 +1,36 @@
 export const achivementData = [
     {
         id: 1,
-        Image: 'wavumbuzi.jpeg',
-        alt: "It was incredable opportuninty to participate in Wavumbuzi Enterpreneurship challenge 2024 (Edition 4)",
+        Image: 'technohunt.jpeg',  // Replace with the correct image file if needed
+        alt: "1st Place • Techno Hunt (Coding Event), STEPCONE 16, GMRIT",
+
     },
     {
-        id: 4,
-        Image: '73-alx-aice-ai-career-essentials-certificate-byiringiro-aime-fils.png',
-        alt: "It's sound great to complete AI career essentials with ALX within 8 weeks where we transformed in digital lives",
-    },
-    {
+        
         id: 2,
-        Image: 'Web Development_certificate (1).jpg',
-        alt: "It was a huge Milestone to complete Web development course with SoloLearn  ",
+        Image: 'corejava.png', // Make sure this image exists in your assets folder
+        alt: "Completed Core Java Programming course on Coursera, building a strong foundation in object-oriented programming and Java fundamentals."
     },
     {
         id: 3,
-        Image: 'Backend Development and Api.png',
-        alt: "I’m happy to share that I’ve obtained a new certification: Back End Development and APIs from freeCodeCamp!",
+        Image: 'python.png', // Make sure this image is in your assets folder
+        alt: "Successfully completed Python Programming course on Coursera, gaining hands-on experience with programming fundamentals and problem solving using Python."
     },
     {
         id: 4,
-        Image: 'Byiringiro_Aime_Fils20240226-72-1iwtq0i.jpg',
-        alt: "The completion of Reactjs course with Great Learn by sharpen skills and Knowledge",
-    },
-    {
-        id: 5,
-        Image: 'Php.png',
-        alt: "The completion of Php Learning basics.",
-    },
+        Image: 'webstra.jpeg', // Make sure this image exists in your assets folder
+        alt: "Participated in the Webstra college tech event, gaining valuable hands-on experience in web development and collaboration with peers."
+    }
 ]
 
 export const Profile = [
     {
         id: 1,
         alt: "Myprofile Image",
-        Image: 'fil.png',
-        Image2: '2.jpg',
-        Greeting: "Hello I'm BYIRINGIRO Aime ",
+        Image: '2.jpg',
+        Greeting: "Hello I'm Ampolu Mallikharjuna Rao ",
         Name: "Software Developer || Mern Stack Developer.",
-        Description: "I am currently student in high school in </br> Software  development  Trade."
+        Description: "I am a final-year B.Tech student passionate about software development."
     },
 ]
 
@@ -47,11 +38,11 @@ export const About = [
     {
         id: 2,
         alt: "Myprofile Image",
-        Image2: '2.png',
-        Greeting: "Hello👋 I'm BYIRINGIRO Aime Fils.",
-        aboutMe: "I am passonate in software developemnt especial in MERN Stack</br>Developement (MongoDb,ExpessJs ,ReactJS and Nodejs) and  </br>I completed month working together with Data Stystem(Eshuri Ltd).",
-        aboutMe2: "So far, I amcurrently working on different project such as  BabyRead , </br>HB_fashion Store and E-learning platform.Out of coding you'll find</br>me in mixing singers vocal and playing basketball.",
-        aboutMe3: "Brielfy I'm Rwandan my residential palce is Rubavu-Gisenyi near to</br> DRC-congo.",
+        Image2: '2.jpg',
+        Greeting: "Hello👋 I'm Mallikharjuna rao.",
+        aboutMe: "I am passionate about software development, especially in the MERN Stack </br>(MongoDB, Express.js, React.js, and Node.js). I enjoy building full-stack applications and </br>have hands-on experience developing real-world projects like ProjectNexus and Sri Sai Juices.",
+        aboutMe2: "Alongside web development, I have a strong interest in problem-solving and have solved </br>350+ Data Structures and Algorithms problems across platforms. </br>Outside of tech, I enjoy exploring music mixing and playing Cricket.",
+        aboutMe3: "I'm from India, currently based in Andhra Pradesh. </br>I’m always open to exciting opportunities to grow as a full-stack developer and problem solver.",
         Name: "Mern Stack Developer",
     },
 ]

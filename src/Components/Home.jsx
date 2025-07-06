@@ -1,143 +1,115 @@
 import { useEffect } from 'react';
 import Aos from "aos";
-import "aos/dist/aos.css"
+import "aos/dist/aos.css";
 import { Profile as data } from "./Basedata";
 
-// Pages.
-import AboutMe from './AboutMe'
-import Project from './Project'
+// Pages
+import Education from './Education';
+import AboutMe from './AboutMe';
+import Project from './Project';
 import Contactme from "./Contact";
 import Achivement from "./Achivement.jsx";
-import { FaFacebook, FaLinkedinIn, FaTwitter } from "react-icons/fa"
+import { FaLinkedinIn, FaTwitter, FaGithub } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 export default function Home() {
   useEffect(() => {
-    Aos.init({ duration: 2000 })
-  })
+    Aos.init({ duration: 1000 });
+  }, []);
 
-  const Users = data.map(item => {
-    return (
-      <div className='min-h-screen flex flex-col lg:flex-row items-center justify-center gap-8 px-4 max-w-7xl mx-auto' key={item.id}>
-        <div className='fixed left-8 top-1/2 transform -translate-y-1/2 hidden lg:flex flex-col gap-4 z-50'>
-          <a 
-            href="https://web.facebook.com/byiringiro.aimefils" 
-            className='text-2xl text-gray-600 hover:text-sky-600 transition-colors duration-300'
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            <FaFacebook />
-          </a>
-          <a 
-            href="https://www.linkedin.com/in/byiringiro-aime-fils-281609296/" 
-            className='text-2xl text-gray-600 hover:text-sky-600 transition-colors duration-300'
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            <FaLinkedinIn />
-          </a>
-          <a 
-            href="https://linkbio.co/byiringiroaimefils" 
-            className='text-2xl text-gray-600 hover:text-sky-600 transition-colors duration-300'
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            <FaTwitter />
-          </a>
-        </div>
-
-        <div className='lg:w-1/2 relative' data-aos="fade-right">
-          <div className='absolute inset-4 bg-gradient-to-r from-sky-600 to-indigo-600 rounded-full blur-3xl opacity-30 animate-pulse'></div>
-          <img 
-            src={item.Image} 
-            alt={item.alt} 
-            className='relative w-full max-w-lg mx-auto drop-shadow-2xl rounded-2xl'
+  const Users = data.map(item => (
+    <div className="hero" key={item.id}>
+      <div className="hero-content">
+        {/* Profile Image */}
+        <div className="hero-image-container" data-aos="fade-right">
+          <img
+            src={`/${item.Image}`}
+            alt={item.alt}
+            className="hero-image"
           />
         </div>
 
-        <div className='lg:w-1/2 text-center lg:text-left' data-aos="fade-left">
-          <h2 className='text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-sky-600 to-indigo-600 bg-clip-text text-transparent'>
+        {/* Greeting & Description */}
+        <div className="hero-text" data-aos="fade-left">
+          <h2 className="hero-title">
             {item.Greeting}
           </h2>
-          <h5 className='text-lg text-gray-600 dark:text-gray-400 mb-4 tracking-wider'>
+          <h5 className="hero-subtitle">
             {item.Name}
           </h5>
-          <div className="w-24 h-1 bg-gradient-to-r from-sky-600 to-indigo-600 rounded-full mx-auto lg:mx-0 mb-6"></div>
-          <p 
-            className='text-xl text-gray-700 dark:text-gray-300 leading-relaxed' 
+          <div className="section-subtitle"></div>
+          <p
+            className="hero-description"
             dangerouslySetInnerHTML={{ __html: item.Description }}
           />
-          
-          <div className='flex gap-4 mt-8 justify-center lg:justify-start'>
-            <a 
-              href="#contact" 
-              className='px-6 py-3 bg-gradient-to-r from-sky-600 to-indigo-600 text-white rounded-full hover:shadow-lg hover:shadow-sky-600/25 transition-all duration-300'
-            >
+
+          {/* Action Buttons */}
+          <div className="hero-buttons">
+            <a href="#contact" className="btn-primary">
               Contact Me
             </a>
-            <a 
-              href="#projects" 
-              className='px-6 py-3 border-2 border-sky-600 text-sky-600 rounded-full hover:bg-sky-600 hover:text-white transition-all duration-300'
-            >
+            <a href="Project" className="btn-secondary">
               View Projects
             </a>
           </div>
 
-          <div className='flex gap-4 mt-8 justify-center lg:justify-start lg:hidden'>
-            <a 
-              href="https://web.facebook.com/byiringiro.aimefils" 
-              className='text-2xl text-gray-600 hover:text-sky-600 transition-colors duration-300'
-              target="_blank" 
+          {/* Social Links - Mobile Only */}
+          <div className="social-links">
+            <a
+              href="https://leetcode.com/u/Mallikharjun07/"
+              target="_blank"
               rel="noopener noreferrer"
+              aria-label="LeetCode Profile"
             >
-              <FaFacebook />
+              <SiLeetcode />
             </a>
-            <a 
-              href="https://www.linkedin.com/in/byiringiro-aime-fils-281609296/" 
-              className='text-2xl text-gray-600 hover:text-sky-600 transition-colors duration-300'
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/mallikharjun-ampolu-325288326/"
+              target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
             >
               <FaLinkedinIn />
             </a>
-            <a 
-              href="https://linkbio.co/byiringiroaimefils" 
-              className='text-2xl text-gray-600 hover:text-sky-600 transition-colors duration-300'
-              target="_blank" 
+            <a
+              href="https://github.com/Mallikharjun7"
+              target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub Profile"
             >
-              <FaTwitter />
+              <FaGithub />
             </a>
           </div>
         </div>
       </div>
-    );
-  });
+    </div>
+  ));
 
   return (
-    <div className="bg-white dark:bg-gray-900">
+    <div>
       <div data-aos="fade-up">
         {Users}
       </div>
 
-      <div className='mt-32'>
+      <div className="section">
         <AboutMe />
       </div>
 
-      <div className="mt-32" >
+      <div className="section">
+        <Education />
+      </div>
+
+      <div className="section">
         <Project />
       </div>
 
-      <div className="mt-32" >
+      <div className="section">
         <Achivement />
       </div>
 
-      <div className="mt-32 mb-16" >
+      <div className="section">
         <Contactme />
       </div>
     </div>
   );
-
 }
-
-
-
