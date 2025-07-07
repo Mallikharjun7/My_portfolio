@@ -48,9 +48,10 @@ export default function Home() {
             <a href="#contact" className="btn-primary">
               Contact Me
             </a>
-            <a href="Project" className="btn-secondary">
+            <Link to="/Project" className="btn-secondary" onClick={() => setOpenLink(false)}>
               View Projects
-            </a>
+            </Link>
+
           </div>
 
           {/* Social Links - Mobile Only */}
