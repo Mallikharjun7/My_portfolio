@@ -48,10 +48,6 @@ export default function Home() {
             <a href="#contact" className="btn-primary">
               Contact Me
             </a>
-            <Link to="/Project" className="btn-secondary" onClick={() => setOpenLink(false)}>
-              View Projects
-            </Link>
-
           </div>
 
           {/* Social Links - Mobile Only */}
